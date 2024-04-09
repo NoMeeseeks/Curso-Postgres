@@ -1,0 +1,23 @@
+SELECT
+    *
+FROM
+    USERS;
+
+--con operador between
+SELECT
+    U.FOLLOWERS
+FROM
+    USERS U
+WHERE
+    U.FOLLOWERS > 4600
+    AND U.FOLLOWERS <4900
+ORDER BY
+    U.FOLLOWERS ASC
+    SELECT
+        U.FOLLOWERS
+    FROM
+        USERS U
+    WHERE
+        U.FOLLOWERS BETWEEN 4600 AND 4900
+    ORDER BY
+        U.FOLLOWERS DESC;
