@@ -175,4 +175,5 @@ FROM
 
 --eliminacion en cascada y actualizacion
 --On delete cascade
+---Al momento de eliminar en la tabla principal y poner delte cascade en las tablas donde recae la llave se elimina todo
 --On update cascade

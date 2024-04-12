@@ -1,27 +1,31 @@
-select * from users;
+SELECT
+	*
+FROM
+	USERS;
 
 SELECT
-	name,
-	-- 	SUBSTRING( name, 0, 5 ),
-	-- 	POSITION( ' ' in name ),
-	SUBSTRING(name, 0, POSITION(' ' IN name)) AS first_name,
-	SUBSTRING(name, POSITION(' ' IN name) + 1) AS last_name
-	-- 	TRIM(SUBSTRING( name, POSITION( ' ' in name ) )) as trimmed_last_name
+	NAME,
+ -- 	SUBSTRING( name, 0, 5 ),
+ -- 	POSITION( ' ' in name ),
+	SUBSTRING(NAME, 0, POSITION(' ' IN NAME))  AS FIRST_NAME,
+	SUBSTRING(NAME, POSITION(' ' IN NAME) + 1) AS LAST_NAME
+ -- 	TRIM(SUBSTRING( name, POSITION( ' ' in name ) )) as trimmed_last_name
 FROM
-	users;
+	USERS;
 
-UPDATE
-	users
+UPDATE USERS
 SET
-	first_name = SUBSTRING(name, 0, POSITION(' ' IN name)),
-	last_name = SUBSTRING(name, POSITION(' ' IN name) + 1);
+	FIRST_NAME = SUBSTRING(
+		NAME,
+		0,
+		POSITION(' ' IN NAME)
+	),
+	LAST_NAME = SUBSTRING(
+		NAME,
+		POSITION(' ' IN NAME) + 1
+	);
 
 SELECT
 	*
 FROM
-	users;
-
-
-
-
-
+	USERS;

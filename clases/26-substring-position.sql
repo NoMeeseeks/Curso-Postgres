@@ -1,10 +1,9 @@
-
-
-select 
-	name,
-	SUBSTRING( name, 0, 5 ),
-	POSITION( ' ' in name ),
-	SUBSTRING( name, 0, POSITION( ' ' in name ) ) as first_name,
-	SUBSTRING( name, POSITION( ' ' in name ) + 1 ) as last_name,
-	TRIM(SUBSTRING( name, POSITION( ' ' in name ) )) as trimmed_last_name
-from users;
+SELECT
+	NAME,
+	SUBSTRING( NAME, 0, 5 ),
+	POSITION( ' ' IN NAME ),
+	SUBSTRING( NAME, 0, POSITION( ' ' IN NAME ) )    AS FIRST_NAME,
+	SUBSTRING( NAME, POSITION( ' ' IN NAME ) + 1 )   AS LAST_NAME,
+	TRIM(SUBSTRING( NAME, POSITION( ' ' IN NAME ) )) AS TRIMMED_LAST_NAME
+FROM
+	USERS;

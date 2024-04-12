@@ -1,16 +1,15 @@
-
-
-
 SELECT
-	id,
-	UPPER(name) AS upper_name,
-	LOWER(name) AS lower_name,
-	LENGTH(name) as LENGTH,
-	(20 * 2) as constante,
-	'*'||id||'-'|| name||'*' as barcode,
-	CONCAT( '*',id,'-', name,'*' ),
-	name
+	ID,
+	UPPER(NAME)                       AS UPPER_NAME,
+	LOWER(NAME)                       AS LOWER_NAME,
+	LENGTH(NAME)                      AS LENGTH,
+	(20 * 2)                          AS CONSTANTE,
+	'*'
+	||ID
+	||'-'
+	|| NAME
+	||'*'                             AS BARCODE,
+	CONCAT( '*', ID, '-', NAME, '*' ),
+	NAME
 FROM
-	users;
-
-
+	USERS;
