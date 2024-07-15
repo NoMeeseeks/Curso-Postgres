@@ -25,3 +25,6 @@ alter sequence 'sequenceName' restart with 8;
 
 select * from continent c ;
 insert into continent values(9,'South Oceania')
+
+--
+
